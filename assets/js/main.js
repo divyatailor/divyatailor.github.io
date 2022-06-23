@@ -243,5 +243,14 @@
       clickable: true
     }
   });
+  window.addEventListener('DOMContentLoaded', function () {
+    var birthYear = new Date(1996, 10, 24).getFullYear();
+    var currentYear = new Date().getFullYear();
+    var age = currentYear - birthYear;
+    document.getElementsByClassName("devBirthdayClass")[0].getElementsByTagName('span')[0].innerHTML = age.toString();
+    document.getElementsByClassName("devCurrentYear")[0].innerHTML = currentYear.toString();
+  });
 
 })()
+
+  
